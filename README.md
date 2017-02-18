@@ -41,3 +41,18 @@ int? i2 = (int?)iBoxed;
 ```
 ##How to: Identify a Nullable Type
 
+
+
+##Example
+```C#
+double? num1 = null;
+            double? num2 = 3.14157;
+            double num3;
+            num3 = num1 ?? 5.34;
+            Console.WriteLine(" Value of num3: {0}", num3);
+            num3 = num2 ?? 5.34;
+            Console.WriteLine(" Value of num3: {0}", num3);
+            ```
+            
+            ![nullable1](https://cloud.githubusercontent.com/assets/20840005/23096396/327e67d8-f635-11e6-952b-f6e9cb668b68.JPG)
+
