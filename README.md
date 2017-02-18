@@ -19,7 +19,6 @@ A nullable type can also be assigned the value null: int? x = null.
 <li>Nested nullable types are not allowed. The following line will not compile: Nullable <Nullable><int>  n;
 </ul>
 
-
 ##Boxing Nullable Types
 ###Objects based on nullable types are only boxed if the object is non-null. If HasValue is false, the object reference is assigned to null instead of boxing. For example:
 ```C#
@@ -40,4 +39,18 @@ bool? b2 = (bool?)bBoxed;
 int? i2 = (int?)iBoxed;  
 ```
 ##How to: Identify a Nullable Type
+
+
+
+##Example
+```C#
+double? num1 = null;
+            double? num2 = 3.14157;
+            double num3;
+            num3 = num1 ?? 5.34;
+            Console.WriteLine(" Value of num3: {0}", num3);
+            num3 = num2 ?? 5.34;
+            Console.WriteLine(" Value of num3: {0}", num3);
+            ```
+            
 
