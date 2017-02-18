@@ -53,4 +53,16 @@ double? num1 = null;
             Console.WriteLine(" Value of num3: {0}", num3);
             ```
             
+            
+            
+```C#
+int? z1 = 5;
+bool? enabled1 = null;
+Double?  s1 = 3.3;
+ // They are similar
+Nullable<int> z2 = 5;
+Nullable<bool> enabled2 = null;
+Nullable<System.Double> s2 = 3.3;
+```
+            
 
