@@ -18,3 +18,26 @@ A nullable type can also be assigned the value null: int? x = null.
 <li>Use the ?? operator to assign a default value that will be applied when a nullable type whose current value is null is assigned to a non-nullable type, for example int? x = null; int y = x ?? -1;
 <li>Nested nullable types are not allowed. The following line will not compile: Nullable <Nullable><int>  n;
 </ul>
+
+
+##Boxing Nullable Types
+###Objects based on nullable types are only boxed if the object is non-null. If HasValue is false, the object reference is assigned to null instead of boxing. For example:
+```C#
+bool? b = null;  
+object o = b;  
+// Now o is null.
+```
+###If the object is non-null -- if HasValue is true -- then boxing occurs, but only the underlying type that the nullable object is based on is boxed. Boxing a non-null nullable value type boxes the value type itself, not the System.Nullable<T> that wraps the value type. For example:
+```C#
+bool? b = false;  
+int? i = 44;  
+object bBoxed = b; // bBoxed contains a boxed bool.  
+object iBoxed = i; // iBoxed contains a boxed int.  
+```
+###The two boxed objects are identical to those created by boxing non-nullable types. And, just like non-nullable boxed types, they can be unboxed into nullable types, as in the following example:
+```C#
+bool? b2 = (bool?)bBoxed;  
+int? i2 = (int?)iBoxed;  
+```
+##How to: Identify a Nullable Type
+
