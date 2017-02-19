@@ -48,7 +48,7 @@ int? i2 = (int?)iBoxed;
 
 
 
-##Example
+##<a href=https://www.tutorialspoint.com/csharp/csharp_nullables.htm>Example</a>
 ```C#
 double? num1 = null;
             double? num2 = 3.14157;
@@ -71,4 +71,5 @@ Nullable<bool> enabled2 = null;
 Nullable<System.Double> s2 = 3.3;
 ```
             
+            <a href=https://metanit.com/sharp/tutorial/2.17.php>not comleted, continuosly</a>
 
